@@ -7,7 +7,7 @@
     tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/edtName"
+        android:id="@+id/edtNameSignUp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
@@ -61,7 +61,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNameSignUp" />
 
     <EditText
         android:id="@+id/edtKickPower"
@@ -116,9 +116,11 @@
         android:layout_width="131dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="50dp"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btnGetDataFromServer"
-        tools:layout_editor_absoluteY="412dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 </android.support.constraint.ConstraintLayout>

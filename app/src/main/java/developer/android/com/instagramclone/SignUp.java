@@ -1,5 +1,6 @@
 package developer.android.com.instagramclone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -17,7 +17,7 @@ import java.util.List;
 import es.dmoral.toasty.Toasty;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
-    private Button btnSave, btnGetAllDataFromServer;
+    private Button btnSave, btnGetAllDataFromServer, btnNext;
     private EditText edtName, edtPunchSpeed, edtPunchPower, edtKickSpeed, edtKickPower;
     private TextView tvName;
     private String allKickBoxers;
@@ -27,13 +27,15 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         btnSave = findViewById(R.id.btnSave);
-        edtName = findViewById(R.id.edtName);
+        edtName = findViewById(R.id.edtNameSignUp);
         edtPunchSpeed = findViewById(R.id.edtPunchSpeed);
         edtPunchPower = findViewById(R.id.edtPunchPower);
         edtKickSpeed = findViewById(R.id.edtKickSpeed);
         edtKickPower = findViewById(R.id.edtKickPower);
         btnGetAllDataFromServer = findViewById(R.id.btnGetDataFromServer);
         tvName = findViewById(R.id.tvName);
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(SignUp.this);
         btnGetAllDataFromServer.setOnClickListener(SignUp.this);
         btnSave.setOnClickListener(SignUp.this);
     }
@@ -89,6 +91,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                         }
                     });
                     break;
+                case R.id.btnNext:
+                    Intent intent = new Intent(SignUp.this,SignUpLoginActivity.class);
+                    startActivity(intent);
+
             }
         } catch (Exception e) {
             Toasty.warning(SignUp.this, e.getMessage(), Toast.LENGTH_LONG).show();
