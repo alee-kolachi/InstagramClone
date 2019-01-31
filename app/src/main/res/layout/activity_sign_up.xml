@@ -4,123 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F9EDCC"
+    android:onClick="rootLayoutTapped"
     tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/edtNameSignUp"
-        android:layout_width="300dp"
+        android:id="@+id/edtUsername"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="11dp"
+        android:background="#F9DF74"
+        android:ems="10"
+        android:hint="Please enter your name"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#EA2B1F"
+        android:textColorHint="#EDAE49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F9DF74"
+        android:ems="10"
+        android:hint="Please enter your email"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#EA2B1F"
+        android:textColorHint="#EDAE49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:background="#F9DF74"
+        android:ems="10"
+        android:hint="Please enter password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textColor="#EA2B1F"
+        android:textColorHint="#EDAE49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="15dp"
+        android:background="#EA2B1F"
+        android:text="Sign Up"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="85dp"
-        android:ems="10"
-        android:hint="Please enter name of the kick boxer"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtKickSpeed"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="85dp"
-        android:ems="10"
-        android:hint="Please enter the kick speed"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPunchPower" />
-
-    <EditText
-        android:id="@+id/edtPunchPower"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="85dp"
-        android:ems="10"
-        android:hint="Please enter the punch power"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPunchSpeed" />
-
-    <EditText
-        android:id="@+id/edtPunchSpeed"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="85dp"
-        android:ems="10"
-        android:hint="Please enter the punch speed"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNameSignUp" />
-
-    <EditText
-        android:id="@+id/edtKickPower"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="85dp"
-        android:ems="10"
-        android:hint="Please enter the kick power"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtKickSpeed" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:text="Save"
+        android:src="@drawable/insta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtKickPower" />
-
-    <Button
-        android:id="@+id/btnGetDataFromServer"
-        android:layout_width="134dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
-        android:text="Get All Data From Server"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/insta" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/textViewTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="163dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="13dp"
+        android:text="Already have an account?"
+        android:textColor="#FFACACAC"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetDataFromServer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="131dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="50dp"
-        android:text="Next"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:text="Login"
+        android:textColor="#008eff"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnGetDataFromServer"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+        app:layout_constraintStart_toEndOf="@+id/textViewTemp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
 </android.support.constraint.ConstraintLayout>

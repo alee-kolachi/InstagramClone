@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9EDCC"
+    android:onClick="rootLayoutTapped"
+    tools:context=".SignUp">
+
+    <TextView
+        android:id="@+id/tvLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="84dp"
+        android:text="Don't have an account?"
+        android:textColor="#acacac"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        android:text="Sign Up"
+        android:textColor="#008eff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="85dp"
+        android:background="#F9DF74"
+        android:ems="10"
+        android:hint="Please enter an email"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#EA2B1F"
+        android:textColorHint="#EDAE49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/insta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/insta" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="85dp"
+        android:background="#F9DF74"
+        android:ems="10"
+        android:hint="Please enter password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textColor="#EA2B1F"
+        android:textColorHint="#EDAE49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="#EA2B1F"
+        android:text="Login"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+
+</android.support.constraint.ConstraintLayout>
